@@ -35,7 +35,7 @@ namespace dotnet_movie_api.Controllers
             Console.WriteLine(searchResult);
             Console.WriteLine("Hellow world");
 
-            if (searchResult == null || searchResult == null )
+            if (searchResult == null || searchResult == null || searchResult.Title == null )
             {
                 return NotFound();
             }

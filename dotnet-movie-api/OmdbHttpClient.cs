@@ -22,6 +22,7 @@ public class OmdbApiClient
     {
         Console.WriteLine(keyword);
         var response = await _httpClient.GetStringAsync($"http://www.omdbapi.com/?apikey={_apiKey}&t={keyword}");
+        
         return JsonConvert.DeserializeObject<MovieSearchResult>(response);
     }
 
